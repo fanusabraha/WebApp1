@@ -26,11 +26,8 @@ public class AdminClassController {
 
     @GetMapping("/customercheck")
     public String CheckCustomer (ModelMap modelMap){
-        List<Customer> customers= new ArrayList<>();
-        customers.add(new Customer("Andreas","Teacher","ADMIN"));
-        customers.add(new Customer("olaf","Coordinator","USER"));
-        customers.add(new Customer("olga","Manager","USER"));
-        customers.add(new Customer("Sylvia","Boss","USER"));
-        modelMap.put("customerData",customers);
+        Customer andreas = new Customer("Andreas","Teacher","USER");
+
+        modelMap.put("customerData",andreas);
         return"switch-case";}
 }

@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http//www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Switch-Case properties</title>
 </head>
 <body>
+<h1>Checking the User Role</h1>
+<div>
+    <div
+        th:text = "${customerData.name}"
+    ></div>
 
+    <div th:switch = "${customerData.role} ">
+        <p  th:case="ADMIN" > You are Admin</p>
+        <p  th:case="USER" > You are USER</p>
+        <p  th:case="TEACHER" > You are TEACHER</p>
+        <p  th:case="MANAGER" > You are MANAGER</p>
+
+    </div>
+</div>
 
 </body>
 </html>

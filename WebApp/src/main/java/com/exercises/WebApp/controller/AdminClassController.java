@@ -21,6 +21,6 @@ public class AdminClassController {
         customers.add(new Customer("olaf","Coordinator","USER"));
         customers.add(new Customer("olga","Manager","USER"));
         customers.add(new Customer("Sylvia","Boss","USER"));
-        modelMap.put("customername",customers);
+        modelMap.put("customerData",customers);
         return"if_else";}
 }

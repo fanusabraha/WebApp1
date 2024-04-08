@@ -10,10 +10,20 @@
         <th> Customer name </th>
         <th> Customer UserType </th>
         <th> Customer Customer Role</th>
+        <th> Options availabele   </th>
     </tr>
     <tr     th:each = "customer: ${customerData}">
-        <td>
 
+        <td th:text= "${customer.name}" ></td>
+        <td th:text= "${customer.userType}" ></td>
+        <td>
+            <a  th:if = "${customer.role}==ADMIN">ADMIN</a>
+            <a  th:unless = "${customer.role}==ADMIN">USER</a>
+
+        </td>
+        <td>
+            <a  th:if = "${customer.role}==ADMIN">
+                <button >Edit or delete Options</button> </a>
         </td>
     </tr>
 </table>

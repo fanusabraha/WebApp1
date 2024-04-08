@@ -22,5 +22,15 @@ public class AdminClassController {
         customers.add(new Customer("olga","Manager","USER"));
         customers.add(new Customer("Sylvia","Boss","USER"));
         modelMap.put("customerData",customers);
-        return"if_else";}
+        return"if-else";}
+
+    @GetMapping("/customercheck")
+    public String CheckCustomer (ModelMap modelMap){
+        List<Customer> customers= new ArrayList<>();
+        customers.add(new Customer("Andreas","Teacher","ADMIN"));
+        customers.add(new Customer("olaf","Coordinator","USER"));
+        customers.add(new Customer("olga","Manager","USER"));
+        customers.add(new Customer("Sylvia","Boss","USER"));
+        modelMap.put("customerData",customers);
+        return"switch-case";}
 }
